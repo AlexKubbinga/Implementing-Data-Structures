@@ -64,6 +64,14 @@ class Heap {
     return root;
   }
 
+  heapify (arr) {
+    this.array = [];
+    for (let i =0; i<arr.length; i++) {
+      this.insert(arr[i]);
+    }
+    return this.array
+  }
+
 }
 
 

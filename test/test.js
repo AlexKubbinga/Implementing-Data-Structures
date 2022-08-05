@@ -21,8 +21,16 @@ console.log(heap.extract_max());
 heap.insert(45);
 console.log(`Final Heap: [${heap.array}]`);
 
-it('Should heapify,insert,remove and extract max ', function () {
+it('Should insert,remove and extract max ', function () {
   heap.array.should.eql([45,19,36,17,12,20,31,8,9])
 });
+
+it('Should heapify ', function () {
+  let heap2 = new Heap();
+  heap.heapify([45,19,36,17,12,20,31,8,9]).should.eql([45,19,36,17,12,20,31,8,9])
+  heap2.heapify([45,19,36,17,12,20,31,8,9]).should.eql([45,19,36,17,12,20,31,8,9])
+});
+
+
 
 });
